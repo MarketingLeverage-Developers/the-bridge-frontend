@@ -12,12 +12,12 @@ const NotoSansKR = localFont({
             style: 'normal',
         },
         {
-            path: '../assets/fonts/NotoSans-Regular.woff2',
+            path: '../assets/fonts/NotoSans-Medium.woff2',
             weight: '500',
             style: 'normal',
         },
         {
-            path: '../assets/fonts/NotoSans-Regular.woff2',
+            path: '../assets/fonts/NotoSans-Bold.woff2',
             weight: '700',
             style: 'normal',
         },
