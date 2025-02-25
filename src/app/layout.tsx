@@ -3,9 +3,22 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import Layout from '@/headful/Layout/Layout';
+import HeaderContent from '@/headful/HeaderContent/HeaderContent';
+import Menu from '@/headful/HeaderContent/Menu/Menu';
+import Logo from '@/headful/HeaderContent/Logo/Logo';
 
 const NotoSansKR = localFont({
     src: [
+        {
+            path: '../assets/fonts/NotoSans-Thin.woff2',
+            weight: '100',
+            style: 'normal',
+        },
+        {
+            path: '../assets/fonts/NotoSans-Light.woff2',
+            weight: '300',
+            style: 'normal',
+        },
         {
             path: '../assets/fonts/NotoSans-Regular.woff2',
             weight: '400',
@@ -43,7 +56,12 @@ export default function RootLayout({
         <html lang="kr" suppressHydrationWarning>
             <body suppressHydrationWarning className={NotoSansKR.className}>
                 <Layout>
-                    <Layout.Header>회사소개</Layout.Header>
+                    <Layout.Header>
+                        <HeaderContent>
+                            <Logo />
+                            <Menu />
+                        </HeaderContent>
+                    </Layout.Header>
                     <Layout.Main>{children}</Layout.Main>
                 </Layout>
             </body>

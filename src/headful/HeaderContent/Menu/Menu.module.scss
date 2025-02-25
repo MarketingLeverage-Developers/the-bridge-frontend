@@ -1,6 +1,10 @@
 .menu {
     display: flex;
     gap: 45px;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 .menuItem {

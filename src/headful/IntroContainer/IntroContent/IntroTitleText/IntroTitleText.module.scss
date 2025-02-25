@@ -5,4 +5,9 @@
     color: #fff;
     word-break: keep-all;
     line-height: 60px;
+
+    @media (max-width: 768px) {
+        font-size: 30px;
+        line-height: 40px;
+    }
 }

@@ -1,12 +1,12 @@
-.introContent {
+.questionContent {
     margin: 0 auto;
-    padding-top: 229px;
-    padding-bottom: 446px;
-    max-width: 437px;
+    padding: 0 50px;
+    padding-top: 122px;
+    max-width: 1600px;
 
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 78px;
 
     @media (max-width: 768px) {
         max-width: 327px;
