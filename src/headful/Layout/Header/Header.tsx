@@ -6,11 +6,7 @@ type HeaderProps = {
 };
 
 const Header = ({ children }: HeaderProps) => {
-    return (
-        <header className={styles.header}>
-            <div className={styles.headerContent}>{children}</div>
-        </header>
-    );
+    return <header className={styles.header}>{children}</header>;
 };
 
 export default Header;
