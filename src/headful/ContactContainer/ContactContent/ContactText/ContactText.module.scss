@@ -1,0 +1,38 @@
+.contactText {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+
+    @media (max-width: 768px) {
+        color: #fff;
+        /* 640px: 25px, 400px: 20px */
+        font-size: clamp(25px, calc(25px + 0.0625 * (100vw - 400px)), 40px);
+        /* 640px: 30px, 400px: 25px */
+        line-height: clamp(25px, calc(25px + (5 * ((100vw - 400px) / 240))), 30px);
+    }
+}
+
+.description {
+    font-weight: 400;
+    font-size: 25px;
+    color: #fff;
+    line-height: 44px;
+
+    @media (max-width: 768px) {
+        color: #fff;
+        /* 640px: 25px, 400px: 20px */
+        font-size: clamp(13px, calc(14px + (5 * ((100vw - 400px) / 240))), 25px);
+        /* 640px: 30px, 400px: 25px */
+        line-height: clamp(25px, calc(25px + (5 * ((100vw - 400px) / 240))), 30px);
+    }
+}

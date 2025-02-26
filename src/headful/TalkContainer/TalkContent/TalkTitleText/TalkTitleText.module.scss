@@ -1,0 +1,28 @@
+.talkTitleText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first {
+    color: #fff;
+    /* 640px: 25px, 400px: 20px */
+    font-size: clamp(20px, calc(20px + (5 * ((100vw - 400px) / 240))), 25px);
+    /* 640px: 30px, 400px: 25px */
+    line-height: clamp(25px, calc(25px + (5 * ((100vw - 400px) / 240))), 30px);
+}
+
+.second {
+    color: #ffdd54;
+    font-size: clamp(18px, calc(18px + (5 * ((100vw - 400px) / 240))), 25px);
+    line-height: clamp(25px, calc(25px + (5 * ((100vw - 400px) / 240))), 30px);
+}
+
+.third {
+    font-weight: 700;
+    color: #fff;
+    /* 640px: 40px, 400px: 35px */
+    font-size: clamp(25px, calc(25px + (5 * ((100vw - 400px) / 240))), 40px);
+    /* 640px: 80px, 400px: 70px */
+    line-height: clamp(70px, calc(70px + (10 * ((100vw - 400px) / 240))), 80px);
+}

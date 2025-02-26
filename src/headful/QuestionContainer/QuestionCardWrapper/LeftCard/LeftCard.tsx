@@ -1,13 +1,25 @@
 import React from 'react';
 import styles from './LeftCard.module.scss';
 import LeftProfileImage from '@/assets/images/left-profile.png';
+import MobileCard from '../MobileCard/MobileCard';
 
 const LeftCard = () => {
     return (
-        <div className={styles.leftCard}>
-            <LeftTextCircle />
-            <LeftProfileCircle />
-        </div>
+        <>
+            <div className={styles.leftCard}>
+                <LeftTextCircle />
+                <LeftProfileCircle />
+            </div>
+            <MobileCard
+                text={
+                    <div>
+                        우리 기업에 맞는
+                        <br /> 정부 지원금, <br /> <span style={{ color: '#FFDD54' }}>무엇을 </span> 받을 수 있을까?
+                    </div>
+                }
+                profileSource={LeftProfileImage.src}
+            />
+        </>
     );
 };
 

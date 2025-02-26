@@ -9,6 +9,9 @@
     gap: 78px;
 
     @media (max-width: 768px) {
-        max-width: 327px;
+        // max-width: 327px;
+        align-items: center;
+        padding-top: 99px;
+        padding-top: 0 5px;
     }
 }

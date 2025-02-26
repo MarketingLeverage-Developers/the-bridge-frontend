@@ -1,0 +1,13 @@
+.pointDescriptionText {
+    font-weight: 400;
+    font-size: 25px;
+    color: #838383;
+}
+
+@media (max-width: 768px) {
+    .pointDescriptionText {
+        /* 640px 기준 25px, 최소 16px로 제한 */
+        font-size: clamp(16px, 3.91vw, 25px);
+        text-align: center; /* 필요한 경우 텍스트 중앙 정렬 */
+    }
+}

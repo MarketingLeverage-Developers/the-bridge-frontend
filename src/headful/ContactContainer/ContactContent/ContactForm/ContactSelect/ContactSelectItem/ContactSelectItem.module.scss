@@ -1,0 +1,25 @@
+.contactSelectItem {
+    height: 32px;
+    padding: 12px 18px;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    font-family: Pretendard;
+    font-weight: 600; /* Block: contact-select */
+    .contact-select__box {
+        font-size: 14px;
+        cursor: pointer;
+        align-self: flex-start;
+    }
+
+    color: #555;
+    // border-radius: 8px;
+
+    &:hover {
+        background-color: #364f87;
+        color: #fff;
+    }
+    &--active {
+    }
+}

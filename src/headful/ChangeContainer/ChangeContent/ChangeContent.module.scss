@@ -1,0 +1,20 @@
+.changeContent {
+    margin: 0 auto;
+    padding: 0 50px;
+    padding-top: 122px;
+    padding-bottom: 252px;
+    max-width: 1600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 78px;
+
+    @media (max-width: 768px) {
+        // max-width: 327px;
+        align-items: center;
+        padding: 0 5px;
+        padding-top: 82px;
+        padding-bottom: 40px;
+    }
+}

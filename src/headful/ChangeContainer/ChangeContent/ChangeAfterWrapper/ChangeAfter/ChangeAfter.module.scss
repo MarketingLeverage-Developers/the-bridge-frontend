@@ -1,0 +1,8 @@
+.changeAfter {
+    flex: 1 1 auto; /* 남은 공간을 채우면서 축소 가능 */
+    width: 100%;
+    height: auto;
+    max-width: 901px;
+    object-fit: contain;
+    min-width: 0;
+}

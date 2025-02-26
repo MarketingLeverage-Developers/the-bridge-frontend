@@ -1,0 +1,54 @@
+.changeBefore {
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.changeBeforeImage {
+    flex: 1 1 auto; /* 남은 공간을 채우면서 축소 가능 */
+    width: 100%;
+    height: auto;
+    max-width: 901px;
+    object-fit: contain;
+    min-width: 0; /* flex 축소가 제대로 작동하도록 함 */
+}
+
+.verticalLine {
+    height: 188px;
+}
+
+.indexArea {
+    position: absolute;
+    top: 0;
+    left: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    justify-content: center;
+    align-items: center;
+    /* 인덱스 영역이 고정된 너비를 갖도록 합니다. 필요에 따라 조정 */
+    flex: 0 0 80px;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #364f87;
+    font-weight: 400;
+    font-size: 32px;
+}

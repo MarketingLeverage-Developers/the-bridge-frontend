@@ -1,0 +1,11 @@
+.changeAfterWrapper {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}

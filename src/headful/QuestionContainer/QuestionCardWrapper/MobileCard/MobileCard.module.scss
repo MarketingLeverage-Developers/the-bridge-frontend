@@ -1,0 +1,49 @@
+.mobileCard {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobileCard {
+        display: flex;
+        width: 100%;
+        border-radius: 90px;
+        background-color: #4c9be8;
+        position: relative;
+        z-index: 2;
+        justify-content: space-between;
+        /* 필요에 따라 내부 패딩 등을 추가할 수 있음 */
+    }
+
+    .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100px; /* 또는 원하는 고정 높이 */
+        padding: 0 clamp(8px, 8vw, 60px);
+        box-sizing: border-box;
+        font-weight: 700;
+        font-size: clamp(10px, 3.5vw, 26px);
+        color: #fff;
+        line-height: clamp(20px, 5vw, 30px);
+    }
+
+    .circle {
+        width: clamp(100px, 28.75vw, 300px);
+        min-width: 100px;
+        aspect-ratio: 1 / 1; /* 항상 정사각형 유지 */
+        border-radius: 50%;
+        background-color: #eff7ff;
+        position: relative;
+        right: -5px;
+        z-index: 3;
+    }
+
+    .profile {
+        width: 75%;
+        z-index: 1;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+    }
+}

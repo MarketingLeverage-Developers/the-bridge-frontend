@@ -1,0 +1,14 @@
+.talkContent {
+    margin: 0 auto;
+    padding-top: 72px;
+    padding-bottom: 78px;
+    max-width: 561px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+
+    @media (max-width: 768px) {
+        gap: 20px;
+    }
+}

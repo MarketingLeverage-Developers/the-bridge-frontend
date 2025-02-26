@@ -1,0 +1,44 @@
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    font-weight: 300;
+    /* 400px일 때 18px, 640px일 때 22px */
+    font-size: clamp(12px, calc(12px + ((100vw - 400px) / 60)), 22px);
+}
+
+.footerInfo span {
+    font-weight: 400;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.license {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.firstLine {
+    display: flex;
+    gap: 22px;
+}
+
+.firstLine .name {
+    display: flex;
+    gap: 10px;
+}
+
+.firstLine .number {
+    display: flex;
+    gap: 10px;
+}
+
+.secondLine {
+    display: flex;
+    gap: 10px;
+}

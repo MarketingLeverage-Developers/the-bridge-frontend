@@ -1,0 +1,21 @@
+.pointCardWrapper {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 38px;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center; /* 각 셀 내의 아이템을 중앙에 정렬 */
+    }
+}
+
+.pointCardWrapper > :nth-child(2n + 1):last-child {
+    // grid-column: 1 / -1;
+    justify-self: center;
+    // width: max-content;
+}

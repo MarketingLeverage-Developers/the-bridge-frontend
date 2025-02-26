@@ -1,0 +1,10 @@
+.changeBracket {
+    width: 100%;
+    max-width: 731px;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        width: 80%;
+    }
+}
