@@ -4,13 +4,16 @@ import { useCheckboxGroup } from './CheckboxGroup';
 type CheckboxGroupItemProps = React.HTMLAttributes<HTMLDivElement> & {
     value: string;
     children: React.ReactNode;
+    onCheckboxGroupItemClick?: (value: string[]) => void;
 };
 
-const CheckboxGroupItem = ({ value, children, ...props }: CheckboxGroupItemProps) => {
+const CheckboxGroupItem = ({ value, children, onCheckboxGroupItemClick, ...props }: CheckboxGroupItemProps) => {
     const { checkboxGroupValue, toggleCheckboxGroupValue } = useCheckboxGroup();
 
     const handleCheckboxGroupItem = () => {
-        toggleCheckboxGroupValue(value);
+        const newCheckboxGroupValue = toggleCheckboxGroupValue(value);
+        console.log('실제값', value);
+        onCheckboxGroupItemClick && onCheckboxGroupItemClick(newCheckboxGroupValue);
     };
 
     useEffect(() => {

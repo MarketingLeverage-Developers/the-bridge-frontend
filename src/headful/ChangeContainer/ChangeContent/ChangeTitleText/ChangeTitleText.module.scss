@@ -1,11 +1,7 @@
 .changeTitleText {
     color: #364f87;
     font-weight: 700;
-    font-size: 40px;
+    font-size: clamp(24px, 24px + (100vw - 360px) * 0.01026, 40px);
     text-align: center;
-    line-height: 50px;
-
-    @media (max-width: 768px) {
-        font-size: clamp(25px, calc(5.7143px + 5.3571vw), 40px);
-    }
+    line-height: clamp(30px, 30px + (100vw - 360px) * 0.01282, 50px);
 }

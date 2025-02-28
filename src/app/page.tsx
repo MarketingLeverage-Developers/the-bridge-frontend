@@ -53,14 +53,22 @@ import FooterContent from '@/headful/FooterContainer/FooterContent/FooterContent
 import FooterContainer from '@/headful/FooterContainer/FooterContainer';
 import FooterInfo from '@/headful/FooterContainer/FooterContent/FooterInfo/FooterInfo';
 import FooterRight from '@/headful/FooterContainer/FooterContent/FooterRight/FooterRight';
+import IntroForm from '@/headful/IntroContainer/IntroContent/IntroForm/IntroForm';
+import FlexBox from '@/headful/FlexBox/FlexBox';
+import TalkSwiper from '@/headful/TalkContainer/TalkContent/TalkSwiper/TalkSwiper';
+import IntroMobileButton from '@/headful/IntroContainer/IntroContent/IntroMobileButton/IntroMobileButton';
 
 export default function Home() {
     return (
         <>
             <IntroContainer>
                 <IntroContent>
-                    <IntroTitleText />
-                    <IntroDescriptionText />
+                    <FlexBox flexDirection="column" gap={15}>
+                        <IntroTitleText />
+                        <IntroDescriptionText />
+                    </FlexBox>
+                    <IntroForm />
+                    <IntroMobileButton />
                 </IntroContent>
                 <CopyContainer>
                     <CopyContent />
@@ -160,7 +168,7 @@ export default function Home() {
                 <TalkContainer>
                     <TalkContent>
                         <TalkTitleText />
-                        <TalkImage />
+                        <TalkSwiper />
                     </TalkContent>
                 </TalkContainer>
                 <ContactContainer>

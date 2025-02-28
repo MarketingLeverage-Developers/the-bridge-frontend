@@ -1,17 +1,17 @@
 .questionContent {
     margin: 0 auto;
-    padding: 0 50px;
-    padding-top: 122px;
+    padding-left: clamp(20px, calc(20px + (100vw - 360px) * 0.07692), 140px);
+    padding-right: clamp(20px, calc(20px + (100vw - 360px) * 0.07692), 140px);
+    padding-top: clamp(66px, calc(66px + (100vw - 360px) * 0.0359), 122px);
+    padding-bottom: clamp(66px, calc(66px + (100vw - 360px) * 0.0359), 122px);
     max-width: 1600px;
 
     display: flex;
     flex-direction: column;
-    gap: 78px;
+    gap: clamp(39px, 39px + (100vw - 360px) * 0.025, 78px);
 
     @media (max-width: 768px) {
         // max-width: 327px;
         align-items: center;
-        padding-top: 99px;
-        padding-top: 0 5px;
     }
 }

@@ -1,14 +1,15 @@
 /* Block: basic-select, Element: content */
 .contactSelectContent {
-    height: auto;
+    max-height: 400px;
     width: 100%;
+    overflow: auto;
     // padding: 12px 0;
     // border-radius: 12px;
     border: 1px solid #364f87;
     background-color: #fff;
     position: absolute;
     left: 0;
-    top: 28px;
+    top: 55px;
     list-style: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 4;

@@ -1,0 +1,14 @@
+.contactCheckBoxItem {
+    font-size: clamp(12px, 12px + (100vw - 360px) * 0.00513, 20px);
+    font-weight: 400;
+    color: #364f87;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contactCheckBoxItem input[type='checkbox'] {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+}

@@ -6,7 +6,11 @@ type IntroContainerProps = {
 };
 
 const PointContainer = ({ children }: IntroContainerProps) => {
-    return <div className={styles.pointContainer}>{children}</div>;
+    return (
+        <div id="point" className={styles.pointContainer}>
+            {children}
+        </div>
+    );
 };
 
 export default PointContainer;

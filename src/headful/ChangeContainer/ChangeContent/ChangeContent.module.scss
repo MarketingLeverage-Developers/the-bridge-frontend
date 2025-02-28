@@ -1,20 +1,17 @@
 .changeContent {
     margin: 0 auto;
-    padding: 0 50px;
-    padding-top: 122px;
-    padding-bottom: 252px;
+    padding-left: clamp(5px, calc(5px + (100vw - 360px) * 0.02885), 50px);
+    padding-right: clamp(5px, calc(5px + (100vw - 360px) * 0.02885), 50px);
+    padding-top: clamp(82px, calc(82px + (100vw - 360px) * 0.02564), 122px);
+    padding-bottom: clamp(40px, calc(40px + (100vw - 360px) * 0.1359), 252px);
     max-width: 1600px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 78px;
+    gap: clamp(30px, 30px + (100vw - 360px) * 0.03077, 78px);
 
     @media (max-width: 768px) {
-        // max-width: 327px;
         align-items: center;
-        padding: 0 5px;
-        padding-top: 82px;
-        padding-bottom: 40px;
     }
 }

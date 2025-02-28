@@ -6,7 +6,11 @@ type QuestionContainerProps = {
 };
 
 const QuestionContainer = ({ children }: QuestionContainerProps) => {
-    return <div className={styles.questionContainer}>{children}</div>;
+    return (
+        <div id="question" className={styles.questionContainer}>
+            {children}
+        </div>
+    );
 };
 
 export default QuestionContainer;

@@ -1,14 +1,32 @@
 .introContent {
+    // width: 100%;
     margin: 0 auto;
-    padding-top: 229px;
-    padding-bottom: 446px;
-    max-width: 437px;
+    padding-left: clamp(20px, calc(20px + (100vw - 360px) * 0.05128), 100px);
+    padding-right: clamp(20px, calc(20px + (100vw - 360px) * 0.05128), 100px);
+
+    /* padding-top: 115px (360px 기준) 에서 229px (1920px 기준)로 점진적 변화 */
+    padding-top: clamp(115px, calc(115px + (100vw - 360px) * 0.07308), 229px);
+
+    /* padding-bottom: 223px (360px 기준) 에서 446px (1920px 기준)로 점진적 변화 */
+    padding-bottom: clamp(100px, 100px + (100vw - 360px) * 0.19231, 400px);
+
+    max-width: 1600px;
 
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
+    align-items: center;
     gap: 36px;
 
+    position: relative;
+
+    @media (max-width: 1400px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     @media (max-width: 768px) {
-        max-width: 327px;
+        flex-direction: column;
+        justify-content: center;
     }
 }

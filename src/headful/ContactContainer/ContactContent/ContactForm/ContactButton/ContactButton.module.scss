@@ -4,8 +4,15 @@
     background-color: #4c9be8;
     border: none;
 
+    word-break: keep-all;
     font-weight: 400;
-    font-size: 25px;
+    font-size: clamp(18px, 18px + (100vw - 360px) * 0.00449, 25px);
     font-family: NotoSansKR;
     color: #fff;
+
+    border-radius: 5px;
+
+    &:disabled {
+        opacity: 0.5;
+    }
 }

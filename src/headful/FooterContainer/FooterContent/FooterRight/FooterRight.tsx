@@ -10,9 +10,11 @@ const FooterRight = () => {
             <div className={styles.time}>
                 <span>상담시간</span> 09:00 ~ 18:00 <span>토 일요일, 공휴일 휴무</span>
             </div>
-            <button>
-                간편 상담 바로가기 <img style={{ height: 20 }} src={ArrowImage.src} />
-            </button>
+            <a href="#intro">
+                <button>
+                    간편 상담 바로가기 <img style={{ height: 20 }} src={ArrowImage.src} />
+                </button>
+            </a>
         </div>
     );
 };

@@ -6,7 +6,11 @@ type ContactContainerProps = {
 };
 
 const ContactContainer = ({ children }: ContactContainerProps) => {
-    return <div className={styles.contactContainer}>{children}</div>;
+    return (
+        <div id="contact" className={styles.contactContainer}>
+            {children}
+        </div>
+    );
 };
 
 export default ContactContainer;

@@ -1,0 +1,17 @@
+.introButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #4c9be8;
+    border: none;
+
+    font-weight: 400;
+    font-size: 16px;
+    font-family: NotoSansKR;
+    color: #fff;
+
+    border-radius: 5px;
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}

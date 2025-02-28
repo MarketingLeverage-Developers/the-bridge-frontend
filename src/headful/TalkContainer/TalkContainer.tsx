@@ -6,7 +6,11 @@ type TalkContainerProps = {
 };
 
 const TalkContainer = ({ children }: TalkContainerProps) => {
-    return <div className={styles.talkContainer}>{children}</div>;
+    return (
+        <div id="talk" className={styles.talkContainer}>
+            {children}
+        </div>
+    );
 };
 
 export default TalkContainer;

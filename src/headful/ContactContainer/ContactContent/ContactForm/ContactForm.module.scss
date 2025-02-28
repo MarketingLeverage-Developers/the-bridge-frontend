@@ -1,10 +1,16 @@
 .contactForm {
-    padding: 50px;
+    padding: clamp(24px, 24px + (100vw - 360px) * 0.01667, 50px);
     border-radius: 30px;
     max-width: 756px;
     background-color: #f0f0f0;
+    box-sizing: border-box;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
         display: none;
+    }
+
+    .label {
+        font-size: clamp(12px, 12px + (100vw - 360px) * 0.00513, 20px);
+        color: #364f87;
     }
 }

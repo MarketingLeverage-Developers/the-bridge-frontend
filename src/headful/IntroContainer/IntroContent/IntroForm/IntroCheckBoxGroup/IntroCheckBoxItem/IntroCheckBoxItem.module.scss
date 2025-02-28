@@ -1,0 +1,14 @@
+.introCheckBoxItem {
+    font-size: 14px;
+    font-weight: 300;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.introCheckBoxItem input[type='checkbox'] {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}

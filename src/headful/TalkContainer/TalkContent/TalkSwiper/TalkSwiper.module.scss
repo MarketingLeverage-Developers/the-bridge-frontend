@@ -1,0 +1,18 @@
+.talkSwiper {
+    max-width: 561px;
+    width: 100%;
+    height: 657px;
+    background-color: #daedff;
+    border-radius: 10px;
+
+    padding-top: clamp(28px, calc(28px + (100vw - 360px) * 0.00962), 43px);
+    padding-right: clamp(25px, calc(25px + (100vw - 360px) * 0.03077), 73px);
+    padding-left: clamp(25px, calc(25px + (100vw - 360px) * 0.03077), 73px);
+
+    box-sizing: border-box;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}

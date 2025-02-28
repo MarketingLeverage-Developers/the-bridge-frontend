@@ -1,15 +1,15 @@
-import React, {createContext, useContext, useState} from "react";
-import Item from "./CheckboxGroupItem";
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import Item from './CheckboxGroupItem';
 
 type CheckboxGroupContextType = {
     checkboxGroupValue: string[];
-    toggleCheckboxGroupValue: (value: string) => void;
+    toggleCheckboxGroupValue: (value: string) => string[];
     isChecked: (value: string) => boolean;
 };
 
 const CheckboxGroupContext = createContext<CheckboxGroupContextType>({
     checkboxGroupValue: [],
-    toggleCheckboxGroupValue: () => {},
+    toggleCheckboxGroupValue: () => [],
     isChecked: () => false,
 });
 
@@ -18,27 +18,26 @@ type CheckboxGroupProps = {
     defaultValue?: string[];
 };
 
-const CheckboxGroup = ({children, defaultValue}: CheckboxGroupProps) => {
-    const [checkboxGroupValue, setCheckboxGroupValue] = useState<string[]>(
-        defaultValue ?? [],
-    );
+const CheckboxGroup = ({ children, defaultValue }: CheckboxGroupProps) => {
+    const [checkboxGroupValue, setCheckboxGroupValue] = useState<string[]>(defaultValue ?? []);
+
+    useEffect(() => {
+        setCheckboxGroupValue(defaultValue ?? []);
+    }, [defaultValue]);
 
     const isChecked = (value: string) => checkboxGroupValue.includes(value);
 
-    const toggleCheckboxGroupValue = (value: string) => {
-        if (isChecked(value)) {
-            setCheckboxGroupValue(
-                checkboxGroupValue.filter(item => item !== value),
-            );
-        } else {
-            setCheckboxGroupValue([...checkboxGroupValue, value]);
-        }
+    const toggleCheckboxGroupValue = (value: string): string[] => {
+        const newValues = isChecked(value)
+            ? checkboxGroupValue.filter((item) => item !== value)
+            : [...checkboxGroupValue, value];
+
+        setCheckboxGroupValue(newValues);
+        return newValues;
     };
 
     return (
-        <CheckboxGroupContext.Provider
-            value={{checkboxGroupValue, isChecked, toggleCheckboxGroupValue}}
-        >
+        <CheckboxGroupContext.Provider value={{ checkboxGroupValue, isChecked, toggleCheckboxGroupValue }}>
             {children}
         </CheckboxGroupContext.Provider>
     );

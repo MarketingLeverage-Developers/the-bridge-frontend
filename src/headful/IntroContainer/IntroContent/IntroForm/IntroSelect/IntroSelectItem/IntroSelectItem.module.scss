@@ -1,0 +1,27 @@
+.introSelectItem {
+    height: 33px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    font-family: Pretendard;
+    font-weight: 600; /* Block: intro-select */
+    .intro-select__box {
+        font-size: 14px;
+        cursor: pointer;
+        align-self: flex-start;
+    }
+
+    color: #555;
+    // border-radius: 8px;
+
+    &:hover {
+        background-color: rgba(54, 79, 135, 0.5);
+
+        color: #fff;
+    }
+    &--active {
+    }
+}

@@ -1,0 +1,18 @@
+.introAgreeToggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: 300;
+    font-size: 12px;
+    color: #787878;
+    @media (max-width: 768px) {
+        font-size: clamp(12px, calc(12px + ((100vw - 400px) / 60)), 16px);
+    }
+}
+
+.introAgreeToggle input[type='checkbox'] {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}

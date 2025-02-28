@@ -1,11 +1,7 @@
 .changeSubTitleText {
     font-weight: 400;
-    font-size: 35px;
-    line-height: 40px;
+    font-size: clamp(24px, 24px + (100vw - 360px) * 0.00705, 35px);
+    line-height: clamp(30px, 30px + (100vw - 360px) * 0.00641, 40px);
     color: #6b6b6b;
     text-align: center;
-
-    @media (max-width: 768px) {
-        font-size: clamp(20px, calc(5.7143px + 5.3571vw), 35px);
-    }
 }

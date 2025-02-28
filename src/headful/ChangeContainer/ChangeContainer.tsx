@@ -6,7 +6,11 @@ type ChangeContainerProps = {
 };
 
 const ChangeContainer = ({ children }: ChangeContainerProps) => {
-    return <div className={styles.changeContainer}>{children}</div>;
+    return (
+        <div id="change" className={styles.changeContainer}>
+            {children}
+        </div>
+    );
 };
 
 export default ChangeContainer;

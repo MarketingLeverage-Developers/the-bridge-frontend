@@ -1,12 +1,13 @@
 .pointInquiryButton {
-    width: 223px;
-    height: 63px;
-    padding: 15px 30px;
-    background-color: #fff;
-
+    padding-top: clamp(10px, calc(10px + (100vw - 360px) * 0.00321), 15px);
+    padding-bottom: clamp(10px, calc(10px + (100vw - 360px) * 0.00321), 15px);
+    padding-left: clamp(20px, calc(20px + (100vw - 360px) * 0.00641), 30px);
+    padding-right: clamp(20px, calc(20px + (100vw - 360px) * 0.00641), 30px);
+    background-color: #4c9be8;
     font-weight: 700;
-    font-size: 25px;
-    color: #142d45;
-    border: 1px solid #bdbdbd;
+    font-size: clamp(18px, 18px + (100vw - 360px) * 0.00449, 25px);
+    color: #fff;
+    border: none;
     border-radius: 50px;
+    cursor: pointer;
 }

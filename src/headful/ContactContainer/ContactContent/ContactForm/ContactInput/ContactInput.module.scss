@@ -9,18 +9,18 @@
 
 .label {
     font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: clamp(12px, 12px + (100vw - 360px) * 0.00513, 20px);
+    line-height: clamp(12px, 12px + (100vw - 360px) * 0.00513, 20px);
     color: #364f87;
-
-    @media (max-width: 768px) {
-        font-size: clamp(12px, calc(12px + ((100vw - 400px) / 60)), 16px);
-    }
+    white-space: nowrap; /* 한 줄로 표시 */
+    overflow: nowrap; /* 내용이 넘칠 경우 숨김 처리 */
+    text-overflow: ellipsis; /* 넘치는 텍스트에 생략 부호 추가 */
 }
 
 .contactInput input {
+    width: 100%;
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(12px, 12px + (100vw - 360px) * 0.00513, 20px);
     font-family: NotoSansKR;
     color: #000;
     border: none;
@@ -28,16 +28,9 @@
     background-color: inherit;
     padding: 0;
 
-    @media (max-width: 768px) {
-        font-size: clamp(12px, calc(12px + ((100vw - 400px) / 60)), 16px);
-    }
-
     &::placeholder {
         font-weight: 400;
-        font-size: 18px;
+        font-size: clamp(12px, 12px + (100vw - 360px) * 0.00513, 20px);
         color: #cecece;
-        @media (max-width: 768px) {
-            font-size: clamp(12px, calc(12px + ((100vw - 400px) / 60)), 16px);
-        }
     }
 }

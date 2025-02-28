@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './ContactInput.module.scss';
 
 type ContactInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
-    label: string;
+    label?: string;
 };
 
-const ContactInput = ({ label, ...props }: ContactInputProps) => {
+const ContactInput = forwardRef<HTMLInputElement, ContactInputProps>(({ label, ...props }, ref) => {
     return (
         <div className={styles.contactInput}>
             <label className={styles.label}>{label}</label>
-            <input {...props} />
+            <input ref={ref} {...props} />
         </div>
     );
-};
+});
 
 export default ContactInput;

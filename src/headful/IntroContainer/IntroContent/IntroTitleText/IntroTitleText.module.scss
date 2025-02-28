@@ -1,13 +1,16 @@
 .introTitleText {
-    font-size: 50px;
+    font-size: clamp(20px, calc(20px + (100vw - 360px) * 0.01923), 50px);
+
     font-weight: 700;
     text-align: center;
     color: #fff;
     word-break: keep-all;
-    line-height: 60px;
+    line-height: clamp(40px, calc(40px + (100vw - 360px) * 0.01282), 60px);
+
+    // max-width: 437px;
 
     @media (max-width: 768px) {
-        font-size: 30px;
-        line-height: 40px;
+        // font-size: 30px;
+        // line-height: 40px;
     }
 }

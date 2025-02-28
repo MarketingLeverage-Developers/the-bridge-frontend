@@ -1,21 +1,15 @@
 .footerContent {
     margin: 0 auto;
     padding: 0 50px;
-    padding-top: 122px;
-    padding-bottom: 252px;
+    padding-top: clamp(24px, 24px + (100vw - 360px) * 0.02051, 56px);
+    padding-bottom: clamp(24px, 24px + (100vw - 360px) * 0.02051, 56px);
     max-width: 1600px;
 
     display: flex;
     justify-content: space-between;
 
     @media (max-width: 768px) {
-        // max-width: 327px;
-        // align-items: center;
-        padding: 0 10px;
-        padding-top: 54px;
-        padding-bottom: 54px;
-
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
     }
 }

@@ -1,5 +1,5 @@
 'use client';
-import React, { ChangeEventHandler, MouseEventHandler, useRef, useState } from 'react';
+import React, { ChangeEventHandler, MouseEventHandler, useEffect, useRef, useState } from 'react';
 import styles from './MobileContactForm.module.scss';
 import Grid from '@/headful/Grid/Grid';
 import ContactInput from '../ContactForm/ContactInput/ContactInput';
@@ -8,8 +8,12 @@ import ContactCheck from '../ContactForm/ContactCheck/ContactCheck';
 import ContactButton from '../ContactForm/ContactButton/ContactButton';
 import axiosInstance from '@/axios';
 import axios from 'axios';
+import FlexBox from '@/headful/FlexBox/FlexBox';
+import IntroCheckBoxGroup from '@/headful/IntroContainer/IntroContent/IntroForm/IntroCheckBoxGroup/IntroCheckBoxGroup';
+import ContactCheckBoxItem from '../ContactForm/ContactCheckBoxItem/ContactCheckBoxItem';
 
 const MobileContactForm = () => {
+    const [companyName, setCompanyName] = useState('');
     const [name, setName] = useState('');
     const firstPhoneRef = useRef<HTMLInputElement>(null);
     const middlePhoneRef = useRef<HTMLInputElement>(null);
@@ -18,6 +22,31 @@ const MobileContactForm = () => {
     const [middlePhone, setMiddlePhone] = useState('');
     const [lastPhone, setLastPhone] = useState('');
     const [isAgree, setIsAgree] = useState(true);
+    const [saleList, setSaleList] = useState([]);
+    const [locationList, setLocationList] = useState([]);
+    const [serviceList, setServiceList] = useState([]);
+    const [location, setLocation] = useState('');
+    const [sales, setSales] = useState('');
+    const [service, setService] = useState<string[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            const locationResponse = await axiosInstance.get('/client/list/location');
+            const salesResponse = await axiosInstance.get('/client/list/sales');
+            const serviceResponse = await axiosInstance.get('/client/list/service');
+            console.log('locationResponse,', locationResponse);
+            console.log('salesResponse', salesResponse);
+            console.log('serviceResponse', serviceResponse);
+
+            setLocationList(locationResponse.data.body);
+            setSaleList(salesResponse.data.body);
+            setServiceList(serviceResponse.data.body);
+        })();
+    }, []);
+
+    const handleCompanyNameInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+        setCompanyName(e.target.value);
+    };
 
     const handleNameInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         setName(e.target.value);
@@ -48,22 +77,41 @@ const MobileContactForm = () => {
         setIsAgree(e.target.checked);
     };
 
+    const handleLocationSelectChange = (value: string) => {
+        setLocation(value);
+    };
+    const handleSaleSelectChange = (value: string) => {
+        setSales(value);
+    };
+
+    const handleServiceCheckboxClick = (value: string[]) => {
+        setService(value);
+    };
+
     const handleSubmitButtonClick: MouseEventHandler<HTMLButtonElement> = async (e) => {
         e.preventDefault();
         try {
             await axiosInstance.post('/client/inquire', {
                 name,
+                companyName,
                 firstPhone,
                 middlePhone,
                 lastPhone,
-                code: 'bridge-1',
-                inquireLocation: '메인-상단',
+                siteUrl: 'thebridgelab.kr',
+                inquireLocation: '메인-하단',
+                location,
+                sales,
+                service: service.join(','),
             });
             window.alert('문의가 접수되었습니다!');
             setName('');
+            setCompanyName('');
             setFirstPhone('');
             setMiddlePhone('');
             setLastPhone('');
+            setLocation('');
+            setSales('');
+            setService([]);
             setIsAgree(true);
         } catch (e) {
             if (axios.isAxiosError(e) && e.response?.data?.result?.message) {
@@ -76,56 +124,97 @@ const MobileContactForm = () => {
         }
     };
 
-    const submitAbled = name && firstPhone.length === 3 && middlePhone.length === 4 && lastPhone.length === 4;
+    const submitAbled =
+        name &&
+        firstPhone.length === 3 &&
+        middlePhone.length === 4 &&
+        lastPhone.length === 4 &&
+        location &&
+        sales &&
+        service.length > 0 &&
+        isAgree;
     const submitDisabled = !submitAbled;
 
     return (
         <div className={styles.mobileContactForm}>
-            <Grid gap="50px">
+            <Grid gap="25px">
                 <Grid.Row>
                     <ContactInput
                         label="회사명"
+                        value={companyName}
                         placeholder="회사명을 입력해주세요."
+                        onChange={handleCompanyNameInputChange}
+                    />
+                </Grid.Row>
+                <Grid.Row>
+                    <ContactInput
+                        label="성함"
+                        value={name}
+                        placeholder="성함을 입력해주세요."
                         onChange={handleNameInputChange}
                     />
                 </Grid.Row>
                 <Grid.Row>
-                    <ContactInput label="성함" placeholder="성함을 입력해주세요." onChange={handleNameInputChange} />
+                    <ContactInput
+                        label="연락처"
+                        placeholder="ex) 010"
+                        ref={firstPhoneRef}
+                        value={firstPhone}
+                        onChange={handleFirstPhoneInputChange}
+                    />
+                    <ContactInput ref={middlePhoneRef} value={middlePhone} onChange={handleMiddlePhoneInputChange} />
+                    <ContactInput ref={lastPhoneRef} value={lastPhone} onChange={handleLastPhoneInputChange} />
                 </Grid.Row>
                 <Grid.Row>
-                    <ContactInput label="연락처" placeholder="연락처를 입력해주세요." />
-                </Grid.Row>
-                <Grid.Row>
-                    <ContactSelect defaultValue="">
+                    <ContactSelect defaultValue={location}>
                         <ContactSelect.Trigger label="지역" placeholder="지역을 선택해주세요." />
                         <ContactSelect.Content>
-                            <ContactSelect.Item value="dd">dd</ContactSelect.Item>
+                            {locationList.map((location: any) => (
+                                <ContactSelect.Item
+                                    key={location.name}
+                                    value={location.name}
+                                    onContactSelectItemClick={handleLocationSelectChange}
+                                >
+                                    {location.name}
+                                </ContactSelect.Item>
+                            ))}
                         </ContactSelect.Content>
                     </ContactSelect>
                 </Grid.Row>
                 <Grid.Row>
-                    <ContactSelect defaultValue="">
+                    <ContactSelect defaultValue={sales}>
                         <ContactSelect.Trigger label="매출" placeholder="매출을 선택해주세요." />
                         <ContactSelect.Content>
-                            <ContactSelect.Item value="a">a</ContactSelect.Item>
-                            <ContactSelect.Item value="b">b</ContactSelect.Item>
-                            <ContactSelect.Item value="c">c</ContactSelect.Item>
+                            {saleList.map((sale: any) => (
+                                <ContactSelect.Item
+                                    key={sale.sales}
+                                    value={sale.sales}
+                                    onContactSelectItemClick={handleSaleSelectChange}
+                                >
+                                    {sale.sales}
+                                </ContactSelect.Item>
+                            ))}
                         </ContactSelect.Content>
                     </ContactSelect>
                 </Grid.Row>
                 <Grid.Row>
-                    <ContactSelect defaultValue="">
-                        <ContactSelect.Trigger
-                            label="상담 원하시는 서비스(중복가능)"
-                            placeholder="서비스를 선택해주세요."
-                        />
-                        <ContactSelect.Content>
-                            <ContactSelect.Item value="dd">dd</ContactSelect.Item>
-                        </ContactSelect.Content>
-                    </ContactSelect>
+                    <FlexBox flexDirection="column" gap={16}>
+                        <div className={styles.label}>상담 원하시는 서비스(중복가능)</div>
+                        <IntroCheckBoxGroup defaultValue={service}>
+                            {serviceList.map((service: any) => (
+                                <ContactCheckBoxItem
+                                    key={service.name}
+                                    value={service.name}
+                                    onCheckboxGroupItemClick={handleServiceCheckboxClick}
+                                >
+                                    {service.name}
+                                </ContactCheckBoxItem>
+                            ))}
+                        </IntroCheckBoxGroup>
+                    </FlexBox>
                 </Grid.Row>
                 <Grid.Row>
-                    <ContactCheck checked={false} onCheckBoxClick={handleCheckBoxChange} />
+                    <ContactCheck checked={isAgree} onCheckBoxClick={handleCheckBoxChange} />
                 </Grid.Row>
                 <Grid.Row>
                     <ContactButton onClick={handleSubmitButtonClick}>상담 신청하기</ContactButton>

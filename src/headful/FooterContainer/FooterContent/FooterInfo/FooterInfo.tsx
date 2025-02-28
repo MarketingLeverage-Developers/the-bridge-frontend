@@ -18,7 +18,8 @@ const FooterInfo = () => {
                     </div>
                     <div className={styles.secondLine}>
                         <span>주소</span>
-                        경기도 남양주시 퇴계원읍 퇴계원로 117, 3층 301-95호(염광빌딩)
+                        경기도 남양주시 퇴계원읍 퇴계원로 117,
+                        <br /> 3층 301-95호(염광빌딩)
                     </div>
                 </div>
                 <div className={styles.name}>

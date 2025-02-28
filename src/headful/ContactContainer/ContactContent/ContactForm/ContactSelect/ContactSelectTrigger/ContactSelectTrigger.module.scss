@@ -15,27 +15,19 @@
 
 .label {
     font-weight: 400;
-    font-size: 20px;
+    font-size: clamp(12px, 12px + (100vw - 360px) * 0.00513, 20px);
     color: #364f87;
-    @media (max-width: 768px) {
-        font-size: clamp(12px, calc(12px + ((100vw - 400px) / 60)), 16px);
-    }
 }
 
 .contactDisplay {
     font-weight: 700;
-    font-size: 18px;
+    font-size: clamp(12px, 12px + (100vw - 360px) * 0.00513, 20px);
     color: #000;
     border: none;
     outline: none;
     background-color: inherit;
     flex: 1;
     text-align: left;
-
-    @media (max-width: 768px) {
-        font-size: clamp(12px, calc(12px + ((100vw - 400px) / 60)), 16px);
-    }
-
     position: relative;
 }
 

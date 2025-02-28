@@ -6,7 +6,11 @@ type IntroContainerProps = {
 };
 
 const IntroContainer = ({ children }: IntroContainerProps) => {
-    return <div className={styles.introContainer}>{children}</div>;
+    return (
+        <div id="intro" className={styles.introContainer}>
+            {children}
+        </div>
+    );
 };
 
 export default IntroContainer;

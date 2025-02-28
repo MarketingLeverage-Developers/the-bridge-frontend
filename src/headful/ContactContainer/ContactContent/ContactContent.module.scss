@@ -1,19 +1,18 @@
 .contactContent {
     margin: 0 auto;
-    padding: 0 50px;
-    padding-top: 270px;
-    padding-bottom: 270px;
-
+    padding-left: clamp(25px, calc(25px + (100vw - 360px) * 0.01603), 50px);
+    padding-right: clamp(25px, calc(25px + (100vw - 360px) * 0.01603), 50px);
+    padding-top: clamp(75px, calc(75px + (100vw - 360px) * 0.125), 270px);
+    padding-bottom: clamp(80px, calc(80px + (100vw - 360px) * 0.12179), 270px);
+    box-sizing: border-box;
     max-width: 1600px;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 
     @media (max-width: 768px) {
         flex-direction: column;
-        padding: 0 25px;
-        padding-top: 75px;
-        padding-bottom: 80px;
-        gap: 48px;
     }
 }

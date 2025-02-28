@@ -1,9 +1,10 @@
 .centerCard {
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translate(-50%, 0);
-
+    // position: absolute;
+    // top: 0px;
+    // left: 50%;
+    // transform: translate(-50%, 0);
+    height: clamp(300px, 300px + (100vw - 360px) * 0.19231, 600px);
+    position: relative;
     @media (max-width: 768px) {
         display: none;
     }
