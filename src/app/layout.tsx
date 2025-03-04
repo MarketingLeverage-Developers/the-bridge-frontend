@@ -55,6 +55,7 @@ export default function RootLayout({
     return (
         <html lang="kr" suppressHydrationWarning>
             <body suppressHydrationWarning className={NotoSansKR.className}>
+                <div id="root"></div>
                 <Layout>
                     <Layout.Header>
                         <HeaderContent>

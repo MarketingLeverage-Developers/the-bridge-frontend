@@ -44,9 +44,9 @@ const MobileContactForm = () => {
         })();
     }, []);
 
-    const handleCompanyNameInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-        setCompanyName(e.target.value);
-    };
+    // const handleCompanyNameInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+    //     setCompanyName(e.target.value);
+    // };
 
     const handleNameInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         setName(e.target.value);
@@ -93,7 +93,7 @@ const MobileContactForm = () => {
         try {
             await axiosInstance.post('/client/inquire', {
                 name,
-                companyName,
+                // companyName,
                 firstPhone,
                 middlePhone,
                 lastPhone,
@@ -105,7 +105,7 @@ const MobileContactForm = () => {
             });
             window.alert('문의가 접수되었습니다!');
             setName('');
-            setCompanyName('');
+            // setCompanyName('');
             setFirstPhone('');
             setMiddlePhone('');
             setLastPhone('');
@@ -138,17 +138,17 @@ const MobileContactForm = () => {
     return (
         <div className={styles.mobileContactForm}>
             <Grid gap="25px">
-                <Grid.Row>
+                {/* <Grid.Row>
                     <ContactInput
                         label="회사명"
                         value={companyName}
                         placeholder="회사명을 입력해주세요."
                         onChange={handleCompanyNameInputChange}
                     />
-                </Grid.Row>
+                </Grid.Row> */}
                 <Grid.Row>
                     <ContactInput
-                        label="성함"
+                        label="회사명 또는 성함"
                         value={name}
                         placeholder="성함을 입력해주세요."
                         onChange={handleNameInputChange}

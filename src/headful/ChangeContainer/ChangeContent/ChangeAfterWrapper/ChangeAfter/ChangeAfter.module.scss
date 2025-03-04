@@ -5,4 +5,15 @@
     max-width: 901px;
     object-fit: contain;
     min-width: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px); // 필요에 따라 조정 가능
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

@@ -1,5 +1,6 @@
 import React, { ChangeEventHandler } from 'react';
 import styles from './IntroAgreeToggle.module.scss';
+import TermModal from '@/headful/TermModal/TermModal';
 
 type CotactCheckProps = {
     checked: boolean;
@@ -11,6 +12,7 @@ const IntroAgreeToggle = ({ checked, onCheckBoxClick }: CotactCheckProps) => {
         <div className={styles.introAgreeToggle}>
             <input type="checkbox" checked={checked} onChange={onCheckBoxClick} />
             <span>개인정보 수집 및 이용에 동의합니다.</span>
+            <TermModal />
         </div>
     );
 };

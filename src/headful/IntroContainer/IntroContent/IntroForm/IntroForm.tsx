@@ -12,6 +12,7 @@ import IntroCheckBoxGroup from './IntroCheckBoxGroup/IntroCheckBoxGroup';
 import IntroAgreeToggle from './IntroAgreeToggle/IntroAgreeToggle';
 import FlexBox from '@/headful/FlexBox/FlexBox';
 import IntroButton from './IntroButton/IntroButton';
+import TermModal from '@/headful/TermModal/TermModal';
 
 const IntroForm = () => {
     const [companyName, setCompanyName] = useState('');
@@ -45,9 +46,9 @@ const IntroForm = () => {
         })();
     }, []);
 
-    const handleCompanyNameInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-        setCompanyName(e.target.value);
-    };
+    // const handleCompanyNameInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+    //     setCompanyName(e.target.value);
+    // };
 
     const handleNameInputChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         setName(e.target.value);
@@ -94,7 +95,6 @@ const IntroForm = () => {
         try {
             await axiosInstance.post('/client/inquire', {
                 name,
-                companyName,
                 firstPhone,
                 middlePhone,
                 lastPhone,
@@ -106,7 +106,6 @@ const IntroForm = () => {
             });
             window.alert('문의가 접수되었습니다!');
             setName('');
-            setCompanyName('');
             setFirstPhone('');
             setMiddlePhone('');
             setLastPhone('');
@@ -139,17 +138,17 @@ const IntroForm = () => {
     return (
         <div className={styles.introForm}>
             <Grid gap="20px">
-                <Grid.Row>
+                {/* <Grid.Row>
                     <IntroInput
                         label="회사명"
                         value={companyName}
                         placeholder="회사명을 입력해주세요."
                         onChange={handleCompanyNameInputChange}
                     />
-                </Grid.Row>
+                </Grid.Row> */}
                 <Grid.Row>
                     <IntroInput
-                        label="성함"
+                        label="회사명 또는 성함"
                         value={name}
                         placeholder="성함을 입력해주세요."
                         onChange={handleNameInputChange}

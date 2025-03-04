@@ -57,6 +57,8 @@ import IntroForm from '@/headful/IntroContainer/IntroContent/IntroForm/IntroForm
 import FlexBox from '@/headful/FlexBox/FlexBox';
 import TalkSwiper from '@/headful/TalkContainer/TalkContent/TalkSwiper/TalkSwiper';
 import IntroMobileButton from '@/headful/IntroContainer/IntroContent/IntroMobileButton/IntroMobileButton';
+import ApiCaller from './components/ApiCaller';
+import MobileFixedContent from '@/headful/MobileFixedContent/MobileFixedContent';
 
 export default function Home() {
     return (
@@ -185,6 +187,8 @@ export default function Home() {
                     <FooterRight />
                 </FooterContent>
             </FooterContainer>
+            <MobileFixedContent />
+            <ApiCaller />
         </>
     );
 }

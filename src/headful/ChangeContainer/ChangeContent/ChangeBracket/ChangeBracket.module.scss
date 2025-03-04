@@ -3,8 +3,13 @@
     max-width: 731px;
     display: flex;
     justify-content: center;
+    transition: transform 1s ease; // 부드러운 회전 효과
 
     @media (max-width: 768px) {
         width: 80%;
     }
+}
+
+.rotated {
+    transform: rotateY(360deg);
 }
