@@ -159,9 +159,20 @@ const ContactForm = () => {
                         ref={firstPhoneRef}
                         value={firstPhone}
                         onChange={handleFirstPhoneInputChange}
+                        maxLength={3}
                     />
-                    <ContactInput ref={middlePhoneRef} value={middlePhone} onChange={handleMiddlePhoneInputChange} />
-                    <ContactInput ref={lastPhoneRef} value={lastPhone} onChange={handleLastPhoneInputChange} />
+                    <ContactInput
+                        ref={middlePhoneRef}
+                        value={middlePhone}
+                        onChange={handleMiddlePhoneInputChange}
+                        maxLength={4}
+                    />
+                    <ContactInput
+                        ref={lastPhoneRef}
+                        value={lastPhone}
+                        onChange={handleLastPhoneInputChange}
+                        maxLength={4}
+                    />
                 </Grid.Row>
                 <Grid.Row gap="30px">
                     <ContactSelect defaultValue={location}>

@@ -1,5 +1,6 @@
 .introInquiryButton {
-    display: none;
+    // display: none;
+    max-width: 240px;
     padding-top: clamp(10px, calc(10px + (100vw - 360px) * 0.00321), 15px);
     padding-bottom: clamp(10px, calc(10px + (100vw - 360px) * 0.00321), 15px);
     padding-left: clamp(20px, calc(20px + (100vw - 360px) * 0.00641), 30px);
@@ -11,7 +12,12 @@
     border: none;
     border-radius: 50px;
 
-    @media (max-width: 768px) {
-        display: block;
+    // @media (max-width: 768px) {
+    //     display: block;
+    // }
+
+    a {
+        text-decoration: none;
+        color: #fff;
     }
 }

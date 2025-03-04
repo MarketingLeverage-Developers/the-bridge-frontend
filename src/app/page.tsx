@@ -59,11 +59,13 @@ import TalkSwiper from '@/headful/TalkContainer/TalkContent/TalkSwiper/TalkSwipe
 import IntroMobileButton from '@/headful/IntroContainer/IntroContent/IntroMobileButton/IntroMobileButton';
 import ApiCaller from './components/ApiCaller';
 import MobileFixedContent from '@/headful/MobileFixedContent/MobileFixedContent';
+import BannerContainer from '@/headful/BannerContainer/BannerContainer';
 
 export default function Home() {
     return (
         <>
-            <IntroContainer>
+            <BannerContainer />
+            {/* <IntroContainer>
                 <IntroContent>
                     <FlexBox flexDirection="column" gap={15}>
                         <IntroTitleText />
@@ -72,122 +74,122 @@ export default function Home() {
                     <IntroForm />
                     <IntroMobileButton />
                 </IntroContent>
-                <CopyContainer>
-                    <CopyContent />
-                </CopyContainer>
-                <QuestionContainer>
-                    <QuestionContent>
-                        <QuestionTitleText />
-                        <QuestionCardWrapper>
-                            <LeftCard />
-                            <CenterCard />
-                            <RightCard />
-                        </QuestionCardWrapper>
-                    </QuestionContent>
-                </QuestionContainer>
-                <PointContainer>
-                    <PointContent>
-                        <PointTitleText />
-                        <PointDescriptionText />
-                        <PointCardWrapper>
-                            <PointCard iconSoruce={PointImage1.src} title={'신용보증'} subTitle={'대출 보증 지원'} />
-                            <PointCard
-                                iconSoruce={PointImage2.src}
-                                title={'기업보증'}
-                                subTitle={
-                                    <>
-                                        기술 기업
-                                        <br />
-                                        금융 보증
-                                    </>
-                                }
-                            />
-                            <PointCard
-                                iconSoruce={PointImage3.src}
-                                title={'농업종합자금'}
-                                subTitle={'농어빈 저금리 대출'}
-                            />
-                            <PointCard
-                                iconSoruce={PointImage4.src}
-                                title={'관광진흥개발기금'}
-                                subTitle={'관광업 운영자금 지원'}
-                            />
-                            <PointCard
-                                iconSoruce={PointImage5.src}
-                                title={'립스'}
-                                subTitle={
-                                    <>
-                                        지방 중소기업
-                                        <br />
-                                        맞춤자금
-                                    </>
-                                }
-                            />
-                            <PointCard
-                                iconSoruce={PointImage6.src}
-                                title={'팁스'}
-                                subTitle={
-                                    <>
-                                        스타트업 R&D
-                                        <br />
-                                        투자 지원
-                                    </>
-                                }
-                            />
-                            <PointCard
-                                iconSoruce={PointImage7.src}
-                                title={'튼튼론'}
-                                subTitle={
-                                    <>
-                                        소상공인 긴급
-                                        <br />
-                                        운영자금
-                                    </>
-                                }
-                            />
-                        </PointCardWrapper>
-                        <PointInquiryButton />
-                    </PointContent>
-                </PointContainer>
+            </IntroContainer> */}
+            <CopyContainer>
+                <CopyContent />
+            </CopyContainer>
+            <QuestionContainer>
+                <QuestionContent>
+                    <QuestionTitleText />
+                    <QuestionCardWrapper>
+                        <LeftCard />
+                        <CenterCard />
+                        <RightCard />
+                    </QuestionCardWrapper>
+                </QuestionContent>
+            </QuestionContainer>
+            <PointContainer>
+                <PointContent>
+                    <PointTitleText />
+                    <PointDescriptionText />
+                    <PointCardWrapper>
+                        <PointCard iconSoruce={PointImage1.src} title={'신용보증'} subTitle={'대출 보증 지원'} />
+                        <PointCard
+                            iconSoruce={PointImage2.src}
+                            title={'기업보증'}
+                            subTitle={
+                                <>
+                                    기술 기업
+                                    <br />
+                                    금융 보증
+                                </>
+                            }
+                        />
+                        <PointCard
+                            iconSoruce={PointImage3.src}
+                            title={'농업종합자금'}
+                            subTitle={'농어빈 저금리 대출'}
+                        />
+                        <PointCard
+                            iconSoruce={PointImage4.src}
+                            title={'관광진흥개발기금'}
+                            subTitle={'관광업 운영자금 지원'}
+                        />
+                        <PointCard
+                            iconSoruce={PointImage5.src}
+                            title={'립스'}
+                            subTitle={
+                                <>
+                                    지방 중소기업
+                                    <br />
+                                    맞춤자금
+                                </>
+                            }
+                        />
+                        <PointCard
+                            iconSoruce={PointImage6.src}
+                            title={'팁스'}
+                            subTitle={
+                                <>
+                                    스타트업 R&D
+                                    <br />
+                                    투자 지원
+                                </>
+                            }
+                        />
+                        <PointCard
+                            iconSoruce={PointImage7.src}
+                            title={'튼튼론'}
+                            subTitle={
+                                <>
+                                    소상공인 긴급
+                                    <br />
+                                    운영자금
+                                </>
+                            }
+                        />
+                    </PointCardWrapper>
+                    <PointInquiryButton />
+                </PointContent>
+            </PointContainer>
 
-                <ChangeContainer>
-                    <ChangeContent>
-                        <ChangeTitleText />
-                        <ChangeBeforeWrapper>
-                            <ChangeBefore index={1} imageSource={ChangeImage1.src} />
-                            <ChangeBefore index={2} imageSource={ChangeImage2.src} />
-                            <ChangeBefore index={3} imageSource={ChangeImage3.src} />
-                        </ChangeBeforeWrapper>
-                        <ChangeBracket />
-                        <ChangeSubTitleText />
-                        <ChangeAfterWrapper>
-                            <ChangeAfter imageSource={AfterImage1.src} />
-                            <ChangeAfter imageSource={AfterImage2.src} />
-                            <ChangeAfter imageSource={AfterImage3.src} />
-                        </ChangeAfterWrapper>
-                    </ChangeContent>
-                </ChangeContainer>
-                <TalkContainer>
-                    <TalkContent>
-                        <TalkTitleText />
-                        <TalkSwiper />
-                    </TalkContent>
-                </TalkContainer>
-                <ContactContainer>
-                    <ContactContent>
-                        <ContactText />
-                        <ContactForm />
-                        <MobileContactForm />
-                    </ContactContent>
-                </ContactContainer>
-            </IntroContainer>
+            <ChangeContainer>
+                <ChangeContent>
+                    <ChangeTitleText />
+                    <ChangeBeforeWrapper>
+                        <ChangeBefore index={1} imageSource={ChangeImage1.src} />
+                        <ChangeBefore index={2} imageSource={ChangeImage2.src} />
+                        <ChangeBefore index={3} imageSource={ChangeImage3.src} />
+                    </ChangeBeforeWrapper>
+                    <ChangeBracket />
+                    <ChangeSubTitleText />
+                    <ChangeAfterWrapper>
+                        <ChangeAfter imageSource={AfterImage1.src} />
+                        <ChangeAfter imageSource={AfterImage2.src} />
+                        <ChangeAfter imageSource={AfterImage3.src} />
+                    </ChangeAfterWrapper>
+                </ChangeContent>
+            </ChangeContainer>
+            <TalkContainer>
+                <TalkContent>
+                    <TalkTitleText />
+                    <TalkSwiper />
+                </TalkContent>
+            </TalkContainer>
+            <ContactContainer>
+                <ContactContent>
+                    <ContactText />
+                    <ContactForm />
+                    <MobileContactForm />
+                </ContactContent>
+            </ContactContainer>
+
             <FooterContainer>
                 <FooterContent>
                     <FooterInfo />
                     <FooterRight />
                 </FooterContent>
             </FooterContainer>
-            <MobileFixedContent />
             <ApiCaller />
         </>
     );

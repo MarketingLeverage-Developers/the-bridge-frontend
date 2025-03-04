@@ -3,11 +3,12 @@ import styles from './IntroContainer.module.scss';
 
 type IntroContainerProps = {
     children: React.ReactNode;
+    imageSource: string;
 };
 
-const IntroContainer = ({ children }: IntroContainerProps) => {
+const IntroContainer = ({ children, imageSource }: IntroContainerProps) => {
     return (
-        <div id="intro" className={styles.introContainer}>
+        <div id="intro" className={styles.introContainer} style={{ backgroundImage: `url(${imageSource})` }}>
             {children}
         </div>
     );

@@ -1,0 +1,40 @@
+.callImage {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 56px;
+        height: 56px;
+        background-color: #000;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@keyframes glowAnimation {
+    0% {
+        background-color: #364f87;
+    }
+    50% {
+        /* #364F87에 약간의 밝기를 추가한 색상 (예: 화이트와 70:30 비율로 혼합) */
+        background-color: #7284ab;
+    }
+    100% {
+        background-color: #364f87;
+    }
+}
+
+.glowing {
+    background-color: rgba(255, 255, 255, 0.15);
+    animation: glowAnimation 1.5s ease-in-out infinite;
+}
+
+.image {
+    width: 42px;
+    height: 42px;
+}

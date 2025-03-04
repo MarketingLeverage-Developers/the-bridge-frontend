@@ -14,8 +14,17 @@ const backdropStyle: React.CSSProperties = {
 };
 
 const Backdrop = (props: BackdropProps) => {
-    const { modalValue } = useModal();
-    return <>{modalValue && <div style={backdropStyle} {...props} />}</>;
+    const { modalValue, closeModal } = useModal();
+
+    const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+        e.stopPropagation(); // 이벤트 버블링 중단
+        if (props.onMouseDown) {
+            props.onMouseDown(e);
+        }
+        closeModal();
+    };
+
+    return <>{modalValue && <div style={backdropStyle} onMouseDown={handleMouseDown} {...props} />}</>;
 };
 
 export default Backdrop;

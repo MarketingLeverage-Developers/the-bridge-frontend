@@ -1,0 +1,15 @@
+.fixedForm {
+    border-radius: 5px;
+    width: 300px;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

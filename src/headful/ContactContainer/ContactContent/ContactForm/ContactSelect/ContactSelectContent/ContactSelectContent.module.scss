@@ -9,7 +9,7 @@
     background-color: #fff;
     position: absolute;
     left: 0;
-    top: 55px;
+    top: clamp(40px, calc(40px + (100vw - 360px) * 0.00962), 55px);
     list-style: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 4;

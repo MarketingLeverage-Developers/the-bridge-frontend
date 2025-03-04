@@ -6,6 +6,9 @@ import Layout from '@/headful/Layout/Layout';
 import HeaderContent from '@/headful/HeaderContent/HeaderContent';
 import Menu from '@/headful/HeaderContent/Menu/Menu';
 import Logo from '@/headful/HeaderContent/Logo/Logo';
+import MobileCallButton from '@/headful/HeaderContent/MobileCallButton/MobileCallButton';
+import MobileFixedContent from '@/headful/MobileFixedContent/MobileFixedContent';
+import FixedContent from '@/headful/FixedContent/FixedContent';
 
 const NotoSansKR = localFont({
     src: [
@@ -61,9 +64,12 @@ export default function RootLayout({
                         <HeaderContent>
                             <Logo />
                             <Menu />
+                            <MobileCallButton />
                         </HeaderContent>
                     </Layout.Header>
                     <Layout.Main>{children}</Layout.Main>
+                    <MobileFixedContent />
+                    <FixedContent />
                 </Layout>
             </body>
         </html>

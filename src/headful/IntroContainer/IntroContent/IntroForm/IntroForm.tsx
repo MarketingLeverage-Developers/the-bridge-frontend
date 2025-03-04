@@ -161,9 +161,20 @@ const IntroForm = () => {
                         ref={firstPhoneRef}
                         value={firstPhone}
                         onChange={handleFirstPhoneInputChange}
+                        maxLength={3}
                     />
-                    <IntroInput ref={middlePhoneRef} value={middlePhone} onChange={handleMiddlePhoneInputChange} />
-                    <IntroInput ref={lastPhoneRef} value={lastPhone} onChange={handleLastPhoneInputChange} />
+                    <IntroInput
+                        ref={middlePhoneRef}
+                        value={middlePhone}
+                        onChange={handleMiddlePhoneInputChange}
+                        maxLength={4}
+                    />
+                    <IntroInput
+                        ref={lastPhoneRef}
+                        value={lastPhone}
+                        onChange={handleLastPhoneInputChange}
+                        maxLength={4}
+                    />
                 </Grid.Row>
                 <Grid.Row>
                     <IntroSelect defaultValue={location}>

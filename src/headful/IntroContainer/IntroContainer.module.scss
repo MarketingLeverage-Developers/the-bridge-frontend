@@ -1,5 +1,8 @@
 .introContainer {
     width: 100%;
-    background-image: url('/images/intro-background.png');
-    // background-repeat: no-repeat
+    // height: 100%;
+    aspect-ratio: 1920 / 1006; // 컨테이너의 비율 고정
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
