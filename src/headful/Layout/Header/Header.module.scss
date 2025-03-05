@@ -5,4 +5,5 @@
     width: 100%;
     // border-bottom: 1px solid black; // 필요시 주석 해제
     z-index: 10000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 아래쪽 그림자 추가 */
 }
