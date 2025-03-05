@@ -30,10 +30,11 @@ const CenterTextCircle = () => {
     return (
         <div className={styles.centerTextCircle}>
             <div>
-                직원 채용 부담을
+                우리 기업에 맞는
                 <br />
-                <span style={{ color: '#FFDD54' }}>줄이는</span> <br />
-                지원금이 있다면?
+                정부지원금,
+                <br />
+                <span style={{ color: '#FFDD54' }}>무엇을</span>받을 수 있을까?
             </div>
         </div>
     );

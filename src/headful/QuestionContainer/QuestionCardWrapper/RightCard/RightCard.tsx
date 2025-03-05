@@ -31,10 +31,10 @@ const RightTextCircle = () => {
     return (
         <div className={styles.rightTextCircle}>
             <div>
-                직원 채용 부담을
+                높아지는 세금 부담,
                 <br />
-                <span style={{ color: '#929292' }}>줄이는</span> <br />
-                지원금이 있다면?
+                지금 할 수 있는 <br />
+                <span style={{ color: '#FFDD54' }}>절세 전략</span>은?
             </div>
         </div>
     );

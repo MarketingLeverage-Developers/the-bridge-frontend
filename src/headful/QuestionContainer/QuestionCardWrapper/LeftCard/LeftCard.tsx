@@ -31,7 +31,7 @@ const LeftTextCircle = () => {
             <div>
                 직원 채용 부담을
                 <br />
-                <span style={{ color: '#929292' }}>줄이는</span> <br />
+                <span style={{ color: '#FFDD54' }}>줄이는</span> <br />
                 지원금이 있다면?
             </div>
         </div>
