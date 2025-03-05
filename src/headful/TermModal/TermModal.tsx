@@ -2,7 +2,8 @@
 import Modal from '@/headless/Modal/Modal';
 import React from 'react';
 import styles from './TermModal.module.scss';
-import Portal from '@/headless/Portal/Portal';
+import dynamic from 'next/dynamic';
+const Portal = dynamic(() => import('@/headless/Portal/Portal'), { ssr: false });
 
 const TermModal = () => {
     return (

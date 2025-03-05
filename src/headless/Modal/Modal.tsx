@@ -1,4 +1,5 @@
 // Modal.js
+'use client';
 import React, { createContext, useContext, useState } from 'react';
 import Trigger from './Trigger';
 import Backdrop from './Backdrop';

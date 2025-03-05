@@ -1,9 +1,5 @@
 import CopyContainer from '@/headful/CopyContainer/CopyContainer';
 import CopyContent from '@/headful/CopyContainer/CopyContent/CopyContent';
-import IntroContainer from '@/headful/IntroContainer/IntroContainer';
-import IntroContent from '@/headful/IntroContainer/IntroContent/IntroContent';
-import IntroDescriptionText from '@/headful/IntroContainer/IntroContent/IntroDescriptionText/IntroDescriptionText';
-import IntroTitleText from '@/headful/IntroContainer/IntroContent/IntroTitleText/IntroTitleText';
 import PointContainer from '@/headful/PointContainer/PointContainer';
 import PointCard from '@/headful/PointContainer/PointContent/PointCardWrapper/PointCard/PointCard';
 import PointCardWrapper from '@/headful/PointContainer/PointContent/PointCardWrapper/PointCardWrapper';
@@ -43,7 +39,6 @@ import AfterImage3 from '@/assets/images/after3.png';
 import TalkContainer from '@/headful/TalkContainer/TalkContainer';
 import TalkContent from '@/headful/TalkContainer/TalkContent/TalkContent';
 import TalkTitleText from '@/headful/TalkContainer/TalkContent/TalkTitleText/TalkTitleText';
-import TalkImage from '@/headful/TalkContainer/TalkContent/TalkImage/TalkImage';
 import ContactContainer from '@/headful/ContactContainer/ContactContainer';
 import ContactContent from '@/headful/ContactContainer/ContactContent/ContactContent';
 import ContactText from '@/headful/ContactContainer/ContactContent/ContactText/ContactText';
@@ -53,13 +48,10 @@ import FooterContent from '@/headful/FooterContainer/FooterContent/FooterContent
 import FooterContainer from '@/headful/FooterContainer/FooterContainer';
 import FooterInfo from '@/headful/FooterContainer/FooterContent/FooterInfo/FooterInfo';
 import FooterRight from '@/headful/FooterContainer/FooterContent/FooterRight/FooterRight';
-import IntroForm from '@/headful/IntroContainer/IntroContent/IntroForm/IntroForm';
-import FlexBox from '@/headful/FlexBox/FlexBox';
 import TalkSwiper from '@/headful/TalkContainer/TalkContent/TalkSwiper/TalkSwiper';
-import IntroMobileButton from '@/headful/IntroContainer/IntroContent/IntroMobileButton/IntroMobileButton';
 import ApiCaller from './components/ApiCaller';
-import MobileFixedContent from '@/headful/MobileFixedContent/MobileFixedContent';
 import BannerContainer from '@/headful/BannerContainer/BannerContainer';
+import { Suspense } from 'react';
 
 export default function Home() {
     return (
@@ -190,7 +182,9 @@ export default function Home() {
                     <FooterRight />
                 </FooterContent>
             </FooterContainer>
-            <ApiCaller />
+            <Suspense fallback={<div></div>}>
+                <ApiCaller />
+            </Suspense>
         </>
     );
 }
