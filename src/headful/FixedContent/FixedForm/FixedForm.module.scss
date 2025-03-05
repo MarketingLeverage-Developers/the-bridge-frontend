@@ -4,10 +4,13 @@
     padding: 14px 18px;
     box-sizing: border-box;
     background-color: #fff;
-    position: relative;
-    right: 0;
-    top: 0;
+    // position: relative;
+    // right: 0;
+    // top: 0;
     transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    // z-index: 1000;
 
     @media (max-width: 768px) {
         display: none;

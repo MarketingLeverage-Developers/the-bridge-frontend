@@ -25,7 +25,7 @@ const BannerContainer = () => {
     } as React.CSSProperties;
 
     return (
-        <div className={styles.talkSwiper}>
+        <div className={styles.bannerContainer}>
             <Swiper
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 spaceBetween={0}
