@@ -11,7 +11,7 @@ const MobileCard = ({ text, profileSource }: MobileCardProps) => {
         <div className={styles.mobileCard}>
             <div className={styles.text}>{text}</div>
             <div className={styles.circle}>
-                <img src={profileSource} className={styles.profile} />
+                <img loading="lazy" src={profileSource} className={styles.profile} />
             </div>
         </div>
     );

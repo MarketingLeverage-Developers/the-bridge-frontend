@@ -11,7 +11,7 @@ const PointCard = ({ iconSoruce, title, subTitle }: PointCardProps) => {
     return (
         <div className={styles.pointCard}>
             <div className={styles.imageWrapper}>
-                <img src={iconSoruce} />
+                <img loading="lazy" src={iconSoruce} />
             </div>
             <div className={styles.title}>{title}</div>
             <div className={styles.subTitle}>{subTitle}</div>

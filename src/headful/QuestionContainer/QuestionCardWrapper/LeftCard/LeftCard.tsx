@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './LeftCard.module.scss';
-import LeftProfileImage from '@/assets/images/left-profile.png';
+import LeftProfileImage from '@/assets/images/left-profile.webp';
 import MobileCard from '../MobileCard/MobileCard';
 
 const LeftCard = () => {
@@ -47,5 +47,5 @@ const LeftProfileCircle = () => {
 };
 
 const LeftProfie = () => {
-    return <img className={styles.leftProfile} src={LeftProfileImage.src} />;
+    return <img loading="lazy" className={styles.leftProfile} src={LeftProfileImage.src} />;
 };

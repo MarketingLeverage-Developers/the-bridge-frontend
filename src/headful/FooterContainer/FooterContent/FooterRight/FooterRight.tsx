@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './FooterRight.module.scss';
-import ArrowImage from '@/assets/images/button-arrow.png';
+import ArrowImage from '@/assets/images/button-arrow.webp';
 
 const FooterRight = () => {
     return (
@@ -12,7 +12,7 @@ const FooterRight = () => {
             </div>
             <a href="#intro">
                 <button>
-                    간편 상담 바로가기 <img style={{ height: 20 }} src={ArrowImage.src} />
+                    간편 상담 바로가기 <img loading="lazy" style={{ height: 20 }} src={ArrowImage.src} />
                 </button>
             </a>
         </div>

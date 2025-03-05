@@ -7,9 +7,9 @@ import 'swiper/css'; // 기본 스타일
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 import styles from './TalkSwiper.module.scss';
-import Talk1Image from '@/assets/images/talk1.png';
-import Talk2Image from '@/assets/images/talk2.png';
-import Talk3Image from '@/assets/images/talk3.png';
+import Talk1Image from '@/assets/images/talk1.webp';
+import Talk2Image from '@/assets/images/talk2.webp';
+import Talk3Image from '@/assets/images/talk3.webp';
 
 const TalkSwiper = () => {
     const imgStyle = {
@@ -37,13 +37,13 @@ const TalkSwiper = () => {
                 allowTouchMove={false} // 터치 이동 비활성화
             >
                 <SwiperSlide>
-                    <img src={Talk1Image.src} />
+                    <img loading="lazy" src={Talk1Image.src} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={Talk2Image.src} />
+                    <img loading="lazy" src={Talk2Image.src} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={Talk3Image.src} />
+                    <img loading="lazy" src={Talk3Image.src} />
                 </SwiperSlide>
             </Swiper>
         </div>

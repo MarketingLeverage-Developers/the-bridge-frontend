@@ -30,6 +30,7 @@ const ChangeAfter = ({ imageSource }: ChangeAfterProps) => {
 
     return (
         <img
+            loading="lazy"
             ref={ref}
             className={`${styles.changeAfter} ${visible ? styles.visible : styles.hidden}`}
             src={imageSource}

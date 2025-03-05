@@ -22,7 +22,7 @@ const ContactSelectTrigger = ({ label, placeholder }: ContactSelectTriggerProps)
                 {isNotSeleted && <div className={styles.placeholder}>{placeholder}</div>}
                 <SelectGroup.Display />
             </div>
-            <img src={SelectArrowImage.src} />
+            <img loading="lazy" src={SelectArrowImage.src} />
         </Dropdown.Trigger>
     );
 };

@@ -22,7 +22,7 @@ const IntroSelectTrigger = ({ label, placeholder }: IntroSelectTriggerProps) => 
             <div className={styles.introDisplay}>
                 {isNotSeleted && <div className={styles.placeholder}>{placeholder}</div>}
                 <SelectGroup.Display />
-                <img className={styles.selectArrow} src={SelectArrowImage.src} />
+                <img loading="lazy" className={styles.selectArrow} src={SelectArrowImage.src} />
             </div>
         </Dropdown.Trigger>
     );

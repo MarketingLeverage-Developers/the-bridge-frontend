@@ -37,9 +37,9 @@ const ChangeBefore = ({ index, imageSource }: ChangeBeforeProps) => {
         <div ref={containerRef} className={`${styles.changeBefore} ${visible ? styles.visible : ''}`}>
             <div className={styles.indexArea}>
                 <div className={styles.circle}>{index}</div>
-                <img className={styles.verticalLine} src={VerticalLineImage.src} alt="Vertical Line" />
+                <img loading="lazy" className={styles.verticalLine} src={VerticalLineImage.src} alt="Vertical Line" />
             </div>
-            <img className={styles.changeBeforeImage} src={imageSource} alt="Change Before" />
+            <img loading="lazy" className={styles.changeBeforeImage} src={imageSource} alt="Change Before" />
         </div>
     );
 };

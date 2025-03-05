@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CenterCard.module.scss';
-import CenterProfileImage from '@/assets/images/center-profile.png';
+import CenterProfileImage from '@/assets/images/center-profile.webp';
 import MobileCard from '../MobileCard/MobileCard';
 
 const CenterCard = () => {
@@ -49,5 +49,5 @@ const CenterProfileCircle = () => {
 };
 
 const CenterProfie = () => {
-    return <img className={styles.centerProfile} src={CenterProfileImage.src} />;
+    return <img loading="lazy" className={styles.centerProfile} src={CenterProfileImage.src} />;
 };

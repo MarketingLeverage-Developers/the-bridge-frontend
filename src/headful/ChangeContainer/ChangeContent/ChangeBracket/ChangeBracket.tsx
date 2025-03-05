@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import BracketImage from '@/assets/images/bracket.png';
+import BracketImage from '@/assets/images/bracket.webp';
 import styles from './ChangeBracket.module.scss';
 
 const ChangeBracket = () => {
@@ -28,6 +28,7 @@ const ChangeBracket = () => {
 
     return (
         <img
+            loading="lazy"
             ref={ref}
             className={`${styles.changeBracket} ${rotated ? styles.rotated : ''}`}
             src={BracketImage.src}

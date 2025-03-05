@@ -6,9 +6,9 @@ import 'swiper/css'; // 기본 스타일
 import 'swiper/css/navigation'; // 네비게이션 버튼 스타일
 import 'swiper/css/pagination'; // 페이지네이션 스타일
 import styles from './BannerContainer.module.scss';
-import Banner1Image from '@/assets/images/banner1.png';
-import Banner2Image from '@/assets/images/banner2.png';
-import Banner3Image from '@/assets/images/banner3.png';
+import Banner1Image from '@/assets/images/banner1.webp';
+import Banner2Image from '@/assets/images/banner2.webp';
+import Banner3Image from '@/assets/images/banner3.webp';
 import IntroContainer from '../IntroContainer/IntroContainer';
 import IntroContent from '../IntroContainer/IntroContent/IntroContent';
 import FlexBox from '../FlexBox/FlexBox';

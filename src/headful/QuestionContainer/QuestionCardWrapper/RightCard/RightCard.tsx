@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './RightCard.module.scss';
-import RightProfileImage from '@/assets/images/right-profile.png';
+import RightProfileImage from '@/assets/images/right-profile.webp';
 import MobileCard from '../MobileCard/MobileCard';
 
 const RightCard = () => {
@@ -49,5 +49,5 @@ const RightProfileCircle = () => {
 };
 
 const RightProfie = () => {
-    return <img className={styles.rightProfile} src={RightProfileImage.src} />;
+    return <img loading="lazy" className={styles.rightProfile} src={RightProfileImage.src} />;
 };
