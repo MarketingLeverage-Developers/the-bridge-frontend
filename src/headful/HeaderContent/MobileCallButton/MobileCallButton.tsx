@@ -5,7 +5,7 @@ import CallImage from '@/assets/images/call.webp';
 const MobileCallButton = () => {
     return (
         <a href="tel:05082010040" className={`${styles.callImage} ${styles.glowing}`}>
-            <img loading="lazy" loading="lazy" src={CallImage.src} alt="전화 이미지" className={styles.image} />
+            <img loading="lazy" src={CallImage.src} alt="전화 이미지" className={styles.image} />
         </a>
     );
 };
