@@ -15,7 +15,7 @@ export default function ApiCaller({ onDataFetched }: ApiCallerProps) {
     useEffect(() => {
         // n_query 값이 있을 경우에만 utm_query를 추가합니다.
         const baseUrl = `${process.env.NEXT_PUBLIC_API_URL}/client/home`;
-        const url = n_query ? `${baseUrl}?utm_query=${n_query}` : baseUrl;
+        const url = n_query ? `${baseUrl}?utm_term=${n_query}` : baseUrl;
 
         fetch(url, {
             next: { revalidate: 60 },
