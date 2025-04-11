@@ -42,3 +42,20 @@
     display: flex;
     gap: 10px;
 }
+
+.Notice {
+    font-style: italic;
+    line-height: 1.3;
+    span {
+        font-weight: 300 !important;
+    }
+    strong {
+        font-weight: 700;
+    }
+    @media (max-width: 768px) {
+        strong,
+        span {
+            display: block;
+        }
+    }
+}

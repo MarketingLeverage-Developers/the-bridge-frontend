@@ -26,6 +26,10 @@ const FooterInfo = () => {
                     <span style={{ color: '#393939' }}>한국법인거래소</span> |{' '}
                     <span style={{ color: '#364F87' }}>더 브릿지 랩</span>
                 </div>
+                <div className={styles.Notice}>
+                    ※ 본 번호로의 광고·영업 전화는 <span>업무방해 및 정보통신망법 위반으로</span>{' '}
+                    <strong>네이버/카카오 본사 및 관계기관에 즉시 신고합니다.</strong>
+                </div>
             </div>
         </div>
     );
